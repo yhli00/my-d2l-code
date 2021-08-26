@@ -86,7 +86,7 @@ def init_weight(x):
 conv_arch = [(1, 64), (1, 128), (2, 256), (2, 512), (2, 512)]
 mini_conv_arch = [(x, y // 4) for x, y in conv_arch]
 net = vgg11(mini_conv_arch)
-# net.apply(init_weight)
+net.apply(init_weight)
 net = net.to(device)
 
 
